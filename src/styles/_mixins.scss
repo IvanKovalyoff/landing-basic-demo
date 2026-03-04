@@ -1,0 +1,131 @@
+@import './tokens';
+
+$tablet_1: 640px;
+$tablet_2: 1024px;
+$desktop: 1200px;
+$desctop_up: 1440px;
+
+@mixin tablet-sm {
+  @media (min-width: $tablet_1) {
+    @content;
+  }
+}
+
+@mixin tablet-lg {
+  @media (min-width: $tablet_2) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $desctop_up) {
+    @content;
+  }
+}
+
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+    cursor: pointer;
+  }
+}
+
+@mixin page-grid {
+  --column: 2;
+
+  display: grid;
+  column-gap: 16px;
+  grid-template-columns: repeat(var(--column), 1fr);
+
+  @include tablet-sm {
+    --column: 8;
+
+    column-gap: 24px;
+  }
+}
+
+@mixin content-space-inline {
+  padding-inline: 16px;
+
+  @include tablet-sm {
+    padding-inline: 36px;
+  }
+
+  @include tablet-lg {
+    padding-inline: 48px;
+  }
+
+  @include desktop {
+    padding-inline: 62px;
+  }
+
+  @include desktop-up {
+    max-width: 1440px;
+    padding-inline: 124px;
+    margin-inline: auto;
+  }
+}
+
+@mixin big-text {
+  font-family:
+    'DM Serif Display',
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: var(--text);
+
+  @include tablet-sm {
+    font-size: 72px;
+  }
+  @include tablet-lg {
+    font-size: 92px;
+  }
+  @include desktop {
+    font-size: 104px;
+  }
+  @include desktop-up {
+    font-size: 112px;
+  }
+}
+
+@mixin body-text {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: -0.005em;
+  color: var(--text);
+}
+
+@mixin uppercase {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  color: var(--text);
+}

@@ -1,0 +1,136 @@
+@use '../../styles/mixins' as *;
+
+.au_section {
+  background-image: url(../../assets/about-us/about-us.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  padding-bottom: 150px;
+
+  @include tablet-sm {
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    margin-top: 40px;
+    background-position-y: bottom;
+    background-position-x: 150px;
+  }
+
+  @include desktop-up {
+    margin-top: 60px;
+    background-position-x: 250px;
+  }
+}
+
+.au_container {
+  flex-direction: column;
+  gap: 34px;
+
+  @include tablet-sm {
+    gap: 46px;
+  }
+
+  @include tablet-lg {
+    gap: 58px;
+  }
+
+  @include desktop {
+    gap: 72px;
+  }
+
+  @include desktop-up {
+    gap: 88px;
+  }
+}
+
+.au_content {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+
+  @include tablet-sm {
+    @include page-grid;
+  }
+}
+
+.au_title {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @include tablet-sm {
+    grid-column: span 4;
+  }
+}
+
+.au_texts {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+
+  @include tablet-sm {
+    grid-column: span 4;
+  }
+}
+
+.text {
+  @include body-text;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 48px;
+  width: 100%;
+
+  @include tablet-sm {
+    @include page-grid;
+
+    row-gap: 16px;
+  }
+}
+
+.num {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+
+  @include tablet-sm {
+    grid-column: span 4;
+  }
+
+  @include desktop {
+    grid-column: span 2;
+  }
+}
+
+.count {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @include big-text;
+
+  color: #f9512e;
+}
+
+.info {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @include body-text;
+}

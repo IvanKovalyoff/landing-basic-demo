@@ -1,0 +1,98 @@
+@use '../../styles/mixins' as *;
+
+.process {
+  flex-direction: column;
+  gap: 34px;
+
+  @include tablet-sm {
+    gap: 46px;
+  }
+
+  @include tablet-lg {
+    gap: 58px;
+  }
+
+  @include desktop {
+    gap: 72px;
+  }
+
+  @include desktop-up {
+    gap: 88px;
+  }
+
+  &_head {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include tablet-lg {
+      gap: 24px;
+    }
+
+    &_title {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    &_desc {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+
+  @include tablet-sm {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+.card {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 1));
+
+  @include tablet-lg {
+    padding: 22px;
+  }
+
+  &_badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    color: var(--text);
+    background: var(--accent-weak);
+    border: 1px solid rgba(184, 92, 56, 0.18);
+    flex: 0 0 auto;
+  }
+
+  &_title {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  &_desc {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+}

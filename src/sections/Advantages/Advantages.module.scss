@@ -1,0 +1,98 @@
+@use '../../styles/mixins' as *;
+
+.advantages {
+  flex-direction: column;
+  gap: 34px;
+
+  @include tablet-sm {
+    gap: 46px;
+  }
+
+  @include tablet-lg {
+    gap: 58px;
+  }
+
+  @include desktop {
+    gap: 72px;
+  }
+
+  @include desktop-up {
+    gap: 88px;
+  }
+
+  &_head {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include tablet-lg {
+      gap: 24px;
+    }
+
+    &_title {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    &_desc {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+
+  @include tablet-sm {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  @include tablet-lg {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  @include desktop-up {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+}
+
+.item {
+  padding: 18px;
+  border-radius: 26px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+
+  &_icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    background: rgba(249, 81, 46, 0.1);
+    border: 1px solid rgba(249, 81, 46, 0.2);
+  }
+
+  &_title {
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+
+    @include desktop {
+      height: 40px;
+    }
+  }
+
+  &_desc {
+    margin: 8px 0 0;
+    color: rgba(28, 26, 38, 0.78);
+    line-height: 1.5;
+  }
+}

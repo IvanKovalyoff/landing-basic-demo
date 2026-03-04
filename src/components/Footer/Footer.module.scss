@@ -1,0 +1,185 @@
+@use '../../styles/mixins' as *;
+
+.footer {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: var(--text);
+  overflow-x: hidden;
+}
+
+.footer_content {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  padding-block: 56px;
+  width: 100%;
+  gap: 40px;
+
+  @include content-space-inline;
+
+  @include tablet-sm {
+    padding-block: 88px;
+    row-gap: 50px;
+  }
+}
+
+.footer_brand {
+  display: flex;
+  width: 136px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+
+  @include hover(transform, scale(1.1));
+}
+
+.logo {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.top,
+.bottom {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  gap: 40px;
+
+  @include tablet-sm {
+    @include page-grid;
+  }
+}
+
+.navigate,
+.inform {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include tablet-sm {
+    grid-column: span 4;
+  }
+}
+
+.nav_title {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @include uppercase;
+
+  color: #7f8096;
+}
+
+.nav_ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  list-style: none;
+}
+
+.nav_link {
+  @include body-text;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  transform-origin: left;
+  text-decoration: none;
+
+  @include hover(transform, scale(1.1));
+}
+
+.note {
+  @include body-text;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.info_link {
+  display: flex;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  transform-origin: left;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include body-text;
+
+  color: var(--accent);
+
+  @include hover(transform, scale(1.1));
+}
+
+.socials {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+
+  @include tablet-sm {
+    grid-column: span 4;
+  }
+}
+
+.iconLink {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include hover(transform, scale(1.2));
+
+  &_f {
+    background-image: url(../../assets/footer/pictures/facebook.svg);
+
+    &:hover {
+      background-image: url(../../assets/footer/pictures/facebook-hover.6922a29c.svg);
+    }
+  }
+
+  &_i {
+    background-image: url(../../assets/footer/pictures/instagram.svg);
+
+    &:hover {
+      background-image: url(../../assets/footer/pictures/instagram-hover.4eb2b745.svg);
+    }
+  }
+
+  &_t {
+    background-image: url(../../assets/footer/pictures/twitter.svg);
+
+    &:hover {
+      background-image: url(../../assets/footer/pictures/twitter-hover.svg);
+    }
+  }
+}
+
+.created {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  @include body-text;
+
+  color: #7f8096;
+
+  @include tablet-sm {
+    grid-column: span 4;
+  }
+}

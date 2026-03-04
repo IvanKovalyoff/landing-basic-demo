@@ -1,0 +1,162 @@
+@use '../../styles/mixins' as *;
+
+.offer {
+  flex-direction: column;
+
+  &_grid {
+    @include page-grid;
+    width: 100%;
+    row-gap: 34px;
+
+    @include tablet-sm {
+      row-gap: 46px;
+    }
+
+    @include tablet-lg {
+      row-gap: 58px;
+    }
+
+    @include desktop {
+      row-gap: 72px;
+    }
+
+    @include desktop-up {
+      row-gap: 88px;
+    }
+  }
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 34px;
+
+  @include tablet-sm {
+    margin-bottom: 46px;
+  }
+
+  @include tablet-lg {
+    gap: 24px;
+    margin-bottom: 58px;
+  }
+
+  @include desktop {
+    margin-bottom: 72px;
+  }
+
+  @include desktop-up {
+    margin-bottom: 88px;
+  }
+
+  &_title {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  &_desc {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  grid-column: 1 / -1;
+
+  @include tablet-sm {
+    grid-column: span 4;
+  }
+
+  @include desktop {
+    grid-column: span 3;
+
+    &:nth-child(3) {
+      grid-column-start: 3;
+      grid-column-end: 6;
+    }
+  }
+
+  &_imgWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @include desktop {
+      height: 500px;
+    }
+  }
+
+  &_img {
+    width: 100%;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 18px;
+
+    &_title {
+      display: block;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 8px;
+
+      @include uppercase;
+
+      color: #7f8096;
+
+      @include tablet-sm {
+        height: 32px;
+      }
+
+      @include tablet-lg {
+        height: 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    &_desc {
+      display: block;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 16px;
+
+      @include body-text;
+
+      @include tablet-sm {
+        height: 100px;
+      }
+
+      @include tablet-lg {
+        height: fit-content;
+        margin-bottom: 24px;
+      }
+    }
+
+    &_more {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      color: var(--text);
+      transform-origin: left;
+
+      @include hover(transform, scale(1.03));
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}

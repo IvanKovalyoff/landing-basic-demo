@@ -1,0 +1,26 @@
+:root {
+  /* Premium, neutral palette */
+  --bg: #fbf7f2;
+  --bg-2: #f3ede6;
+  --text: #141316;
+  --muted: rgba(20, 19, 22, 0.72);
+  --card: #ffffff;
+
+  /* Brand accent (warm copper) */
+  --accent: #b85c38;
+  --accent-weak: rgba(184, 92, 56, 0.14);
+
+  --border: rgba(20, 19, 22, 0.1);
+
+  /* Subtle depth */
+  --shadow-sm: 0 10px 30px rgba(20, 19, 22, 0.08);
+  --shadow: 0 24px 70px rgba(20, 19, 22, 0.1);
+
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+
+  /* Spacing system */
+  --section-y: 84px;
+  --section-y-lg: 112px;
+}
