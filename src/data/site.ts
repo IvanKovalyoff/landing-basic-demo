@@ -183,28 +183,5 @@ export const site = {
       { kind: 'x', href: 'https://x.com/', label: 'X (demo)' },
     ] as const,
     copyright: (year: number) => `© ${year} ${company.name} — demo planu BASIC`,
-  },
-
-  privacyPolicyText: `1. Administrator
-Administratorem danych jest ${company.fullName}, ${company.address}, ${company.postalCode} ${company.city}, NIP: ${company.nip}.
-
-2. Zakres danych
-W formularzu kontaktowym przetwarzamy: imię, adres e-mail oraz treść wiadomości.
-
-3. Cel i podstawa
-Dane przetwarzamy wyłącznie w celu odpowiedzi na Twoje zapytanie. Podstawą jest Twoja zgoda.
-
-4. Okres przechowywania
-Dane przechowujemy maksymalnie 12 miesięcy lub do czasu wycofania zgody.
-
-5. Odbiorcy
-Dane mogą być przetwarzane przez dostawcę hostingu (Netlify) jako podmiot przetwarzający.
-
-6. Prawa
-Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz wniesienia skargi do PUODO.
-
-7. Dobrowolność
-Podanie danych jest dobrowolne, ale niezbędne do wysłania formularza.
-
-Kontakt: kontakt@piekarniacreative.pl`,
-} as const;
+  }
+}

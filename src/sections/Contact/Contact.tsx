@@ -101,7 +101,7 @@ export default function Contact() {
                 <input type="checkbox" name="rodo-consent" required checked={consent} onChange={e => setConsent(e.target.checked)} />
                 <span>
                   Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z{' '}
-                  <a href="/privacy.html" target="_blank" rel="noopener noreferrer">
+                  <a href="/privacy.html">
                     polityką prywatności
                   </a>
                   *
