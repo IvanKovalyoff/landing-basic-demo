@@ -63,6 +63,7 @@ export default function Contact() {
             <form
               name={site.contact.form.name}
               method="POST"
+              data-netlify="true" 
               action={site.contact.form.thanksPath}
               onSubmit={onSubmit}
             >
