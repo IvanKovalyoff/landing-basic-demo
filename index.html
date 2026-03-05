@@ -36,7 +36,12 @@
     <div id="root"></div>
 
     <!-- Netlify Forms needs a static form in HTML at build time so it can detect and register fields -->
-    <form name="contact-basic" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <form 
+      name="contact-basic" 
+      data-netlify="true" 
+      netlify-honeypot="bot-field" 
+      hidden
+    >
       <input type="text" name="name" />
       <input type="email" name="email" />
       <textarea name="message"></textarea>
