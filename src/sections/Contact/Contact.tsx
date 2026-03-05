@@ -65,7 +65,7 @@ export default function Contact() {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              action={site.contact.form.thanksPath}
+              action="/thanks"
               onSubmit={onSubmit}
             >
               <input type="hidden" name="form-name" value={site.contact.form.name} />
