@@ -1,10 +1,10 @@
 // Centralized content/config for the whole landing.
 // Goal: for a new client you mainly change THIS file + assets.
 
-import offerImg1 from '../assets/offer/images/maria-orlova-kU7TkW9FIJY-unsplash.jpg';
-import offerImg2 from '../assets/offer/images/cake.jpg';
-import offerImg3 from '../assets/offer/images/big-cake.jpg';
-import offerImg4 from '../assets/offer/images/celebrating-cake.jpg';
+import offerImg1 from '../assets/offer/images/bread.webp';
+import offerImg2 from '../assets/offer/images/cake.webp';
+import offerImg3 from '../assets/offer/images/big-cake.webp';
+import offerImg4 from '../assets/offer/images/celebrating-cake.webp';
 
 const toTelHref = (phoneDisplay: string) =>
   `tel:${phoneDisplay.replace(/\s+/g, '').replace(/\(0\)/g, '')}`;
